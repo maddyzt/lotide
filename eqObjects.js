@@ -42,6 +42,7 @@ const eqObjects = function(object1, object2) {
   return same;
 };
 
+module.exports = eqObjects;
 
 // // test code
 // // const ab = { a: "1", b: "2" };

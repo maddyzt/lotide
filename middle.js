@@ -1,22 +1,8 @@
-// eqArrays function checks if two arrays are equal
-const eqArrays = (arrayOne, arrayTwo) => {
-  arrayOne = arrayOne.toString();
-  arrayTwo = arrayTwo.toString();
-  if (arrayOne === arrayTwo) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// require eqArrays 
+const eqArrays = require('./eqArrays');
 
-// assertArraysEqual function displays a pass/error message if the arrays are equal or not
-const assertArraysEqual = (a, b) => {
-  if (eqArrays(a, b)) {
-    console.log(`✅✅✅ Assertion Passed: ${a} === ${b}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${a} !== ${b}`);
-  }
-};
+// require assertArraysEqual
+const assertArraysEqual = require('./assertArraysEqual');
 
 // middle function returns the middle element(s) of an array
 const middle = (array) => {
@@ -35,7 +21,4 @@ const middle = (array) => {
   return newArray;
 };
 
-// test cases
-// console.log(assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]));
-// console.log(assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]));
-// console.log(assertArraysEqual(middle([1, 2]), []));
+module.exports = middle;

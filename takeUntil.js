@@ -1,20 +1,6 @@
-const eqArrays = (arrayOne, arrayTwo) => {
-  arrayOne = arrayOne.toString();
-  arrayTwo = arrayTwo.toString();
-  if (arrayOne === arrayTwo) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = (a, b) => {
-  if (eqArrays(a, b)) {
-    console.log(`✅✅✅ Assertion Passed: ${a} === ${b}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${a} !== ${b}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 // define function takeUntil
 // takes in 2 parameters
   // an array
@@ -33,17 +19,4 @@ const takeUntil = (array, callback) => {
   return array;
 };
 
-// test code
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-// console.log(results1);
-
-console.log('---');
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-// console.log(results2);
-
-assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ])
-assertArraysEqual(results2, [ 'I\'ve', 'been', 'to', 'Hollywood' ])
-
+module.exports = takeUntil;

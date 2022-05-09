@@ -1,13 +1,5 @@
-// define eqArrays function
-const eqArrays = (arrayOne, arrayTwo) => {
-  arrayOne = arrayOne.toString();
-  arrayTwo = arrayTwo.toString();
-  if (arrayOne === arrayTwo) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// require eqArrays function
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = (a, b) => {
   if (eqArrays(a, b)) {

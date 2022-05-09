@@ -18,7 +18,5 @@ const eqArrays = (arrayOne, arrayTwo) => {
   }
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), false);
-assertEqual(eqArrays([1, 2, 3], [1,2,3]), true);
-assertEqual(eqArrays(["hello", "hi"], ["hello", "hi"]), true);
+module.exports = eqArrays;
+

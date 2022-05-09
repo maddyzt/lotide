@@ -17,7 +17,4 @@ const assertArraysEqual = (a, b) => {
   }
 };
 
-// assertArraysEqual([1,2,3], [1,2,3]);
-// assertArraysEqual([1,2,3], [1,2,3,4]);
-// assertArraysEqual(["hi"], ["hi"]);
-// assertArraysEqual([],[1]);
+module.exports = assertArraysEqual;

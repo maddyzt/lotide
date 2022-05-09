@@ -1,21 +1,9 @@
 // define eqArrays function
-const eqArrays = (arrayOne, arrayTwo) => {
-  arrayOne = arrayOne.toString();
-  arrayTwo = arrayTwo.toString();
-  if (arrayOne === arrayTwo) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = (a, b) => {
-  if (eqArrays(a, b)) {
-    console.log(`✅✅✅ Assertion Passed: ${a} === ${b}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${a} !== ${b}`);
-  }
-};
+
+const assertArraysEqual = require('./assertArraysEqual');
+
 
 // letterPositions function
 const letterPositions = function(sentence) {
@@ -34,8 +22,5 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-// test code
-// console.log(letterPositions("hello"));
-// console.log(letterPositions("lighthouse in the house"));
-// assertArraysEqual(letterPositions("hello").e, [1]);
+module.exports = letterPositions;
 
